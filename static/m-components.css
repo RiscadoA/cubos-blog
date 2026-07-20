@@ -1,7 +1,7 @@
 /*
     This file is part of m.css.
 
-    Copyright © 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+    Copyright © 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
               Vladimír Vondruš <mosra@centrum.cz>
     Copyright © 2019 Cris Luengo <cris.l.luengo@gmail.com>
     Copyright © 2021 Josh <dev@jotch.dev>
@@ -127,6 +127,9 @@ pre, code {
   font-size: var(--code-font-size);
   color: var(--code-color);
   background-color: var(--code-background-color);
+}
+div.m-code, .m-doc-wrap, .m-doc-wrap-bumper {
+  font-family: var(--code-font), monospace, monospace;
 }
 pre.m-console, code.m-console {
   color: var(--console-color);
@@ -656,7 +659,7 @@ figure.m-figure figcaption, .m-code-figure figcaption, .m-console-figure figcapt
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: var(--heading-font-weight);
-  font-size: 1.17rem; /* taken from webkit defaults for h3 */
+  font-size: 1rem;
 }
 figure.m-figure figcaption a, .m-code-figure figcaption a, .m-console-figure figcaption a {
   text-decoration: var(--link-decoration-heading);

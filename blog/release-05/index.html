@@ -19,8 +19,8 @@
   <meta property="og:url" content="https://cubos.riscadoa.com/blog/release-05/" />
   <meta property="og:description" content="From Voxel collisions, point light shadows and an audio plugin, to web support, text rendering, and FXAA." />
   <meta name="twitter:description" content="From Voxel collisions, point light shadows and an audio plugin, to web support, text rendering, and FXAA." />
-  <meta property="og:image" content="../../images/blog/release/0-5/cover.png" />
-  <meta name="twitter:image" content="../../images/blog/release/0-5/cover.png" />
+  <meta property="og:image" content="https://cubos.riscadoa.com/images/blog/release/0-5/cover.png" />
+  <meta name="twitter:image" content="https://cubos.riscadoa.com/images/blog/release/0-5/cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:type" content="article" />
 </head>
@@ -139,8 +139,14 @@ to decompose a voxel shape into multiple box collision shapes.</p>
 <p>We introduced the FXAA (Fast Approximate Anti-Aliasing) technique to reduce jagged edges in the rendered images.
 As you can see in the images below, FXAA smooths out the visuals without the performance cost of traditional anti-aliasing methods.</p>
 <img-comparison-slider>
-<img slot="before" src="../../images/blog/release/0-5/cars_before.png" style="width: 100%" />
-<img slot="after" src="../../images/blog/release/0-5/cars_after.png" style="width: 100%" />
+<figure class="before" slot="first">
+<img src="../../images/blog/release/0-5/cars_before.png" style="width: 100%" />
+<figcaption>FXAA Off</figcaption>
+</figure>
+<figure class="after" slot="second">
+<img src="../../images/blog/release/0-5/cars_after.png" style="width: 100%" />
+<figcaption>FXAA On</figcaption>
+</figure>
 </img-comparison-slider>
 </section>
 <section id="ui-text-element-using-msdf-for-text-rendering-mkuritsu">
