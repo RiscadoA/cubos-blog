@@ -83,7 +83,7 @@ M_SITE_LOGO = 'images/favicon.png'
 M_SITE_LOGO_TEXT = 'Cubos'
 
 PLUGIN_PATHS = ['m.css/plugins', 'plugins']
-PLUGINS = ['m.htmlsanity', 'm.code', 'm.metadata', 'author']
+PLUGINS = ['m.htmlsanity', 'm.code', 'm.images', 'm.math', 'm.components', 'm.metadata', 'author']
 
 FORMATTED_FIELDS = ['summary', 'landing', 'more_content', 'description', 'badge']
 
