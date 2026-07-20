@@ -4,9 +4,12 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - uses: actions/checkout@v3
@@ -16,17 +19,17 @@ jobs:
     - name: Install Texlive
       run: |
         sudo apt-get update
-        sudo apt-get install texlive-base texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended libgs-dev
+        sudo apt-get install texlive-base texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12'
+        python-version: '3.x'
 
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install 'docutils<0.21' pelican Pygments pillow
+        pip install pelican Pygments pillow
 
     - name: Build
       run: pelican ${{github.workspace}}/content -s ${{github.workspace}}/publishconf.py --fatal errors
@@ -37,4 +40,3 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ${{github.workspace}}/output
         keep_files: true
-
