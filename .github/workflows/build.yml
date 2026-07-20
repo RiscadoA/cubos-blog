@@ -24,12 +24,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.12'
 
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pelican Pygments pillow
+        pip install 'docutils<0.21' pelican Pygments pillow
 
     - name: Build
       run: pelican ${{github.workspace}}/content -s ${{github.workspace}}/publishconf.py --fatal errors
